@@ -1,0 +1,22 @@
+clc; clear all;
+f1 = 100;
+f2 = 600;
+fs = 500;
+w1 = 2 * pi * f1/fs;
+w2 = 2 * pi * f2/fs;
+t = 0:0.00001:0.02;
+xa1 = sin(2 * pi * f1 * t);
+xa2 = sin(2 * pi * f2 * t);
+n = 0:1:10;
+x1 = sin(w1 * n);
+x2 = sin(w2 * n);
+
+plot(t, xa1, 'linewidth', 2);
+hold on;
+plot(t, xa2, 'linewidth', 2);
+hold on;
+stem(n / fs, x1, '.', 'linewidth', 2);
+axis([0, 0.02, -1.1, 1.1]);
+grid;
+title('x_a(t)');
+xlabel('t/s');
