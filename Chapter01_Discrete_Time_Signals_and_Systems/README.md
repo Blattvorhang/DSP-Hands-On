@@ -4,3 +4,5 @@
 具体参数如下：
 抽样频率$f_s=500\text{Hz}$  
 两个正弦波频率：$f_1=100\text{Hz},f_2=600\text{Hz}$
+
+![](sampling.png)
