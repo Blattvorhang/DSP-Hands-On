@@ -37,12 +37,14 @@ NUM_SAMPLES=2000 #每个缓冲区的帧数
 channels=1 # 声道
 sampwidth=2 # 设置样本宽度
 TIME=5 # 录制时长
+
 def save_wave_file(filename,data): 
     with wave.open(filename,'wb') as wf: # 打开文件
         wf.setnchannels(channels) # 设置声道数量
         wf.setsampwidth(sampwidth) # 设置样本宽度
         wf.setframerate(framerate) # 设置帧速率
-        wf.writeframes(b"".join(data)) 
+        wf.writeframes(b"".join(data))
+
 def my_record(filename):
     pa=PyAudio() 
     stream=pa.open(format = paInt16,channels=1, # 创建
@@ -55,8 +57,9 @@ def my_record(filename):
         my_buf.append(string_audio_data)
         count+=1
         print('.',end="")
-        save_wave_file(filename+".wav",my_buf)
-stream.close()
+    save_wave_file(filename+".wav",my_buf)
+    stream.close()
+
 my_record("test")
 ```
 
