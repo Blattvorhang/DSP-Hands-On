@@ -62,7 +62,7 @@ def my_record(filename):
 my_record("test")
 ```
 
-## 成果
+## 结果
 ### 原始信号
 ![](imgs/original.png)
 ### 抽取信号
