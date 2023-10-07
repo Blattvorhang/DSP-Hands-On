@@ -13,8 +13,7 @@ $$H(z) = 1 + \alpha z^{−R} \tag{2}$$
 
 实验环境选用 MATLAB 或者 Python 都可以。  
 ## 一、用 MATLAB 进行试验
-1. 采样量化。使用 matlab 的 `audiorecorder` 函数录制一段一定采样频率的语音数据。画出
-语音信号波形，横轴标注为时间“t(s)”，纵轴为”幅度”。
+1. 采样量化。使用 matlab 的 `audiorecorder` 函数录制一段一定采样频率的语音数据。画出语音信号波形，横轴标注为时间“t(s)”，纵轴为”幅度”。
 2. 对录制语音信号降低一倍采样率，进行抽取，画出抽取后的信号波形，横轴标注为时间
 “t(s)”， 纵轴为”幅度”，播放降低采样率后的语音信号。
 3. 设回声延迟为 0.4 秒，回声衰减 60%，即 α=0.4；
@@ -64,10 +63,10 @@ my_record("test")
 
 ## 结果
 ### 原始信号
-![](imgs/original.png)
+![原始信号](imgs/original.png)
 ### 抽取信号
-![](imgs/downsampled.png)
+![抽取信号](imgs/downsampled.png)
 ### 回声信号
-![](imgs/echo.png)
+![回声信号](imgs/echo.png)
 ### 滤波器方法
-![](imgs/filter.png)
+![滤波器方法](imgs/filter.png)
